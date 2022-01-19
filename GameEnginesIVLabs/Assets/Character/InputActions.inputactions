@@ -1,0 +1,115 @@
+{
+    "name": "InputActions",
+    "maps": [
+        {
+            "name": "PlayerActionMap",
+            "id": "b7a5fa2b-e2c0-4bf6-9969-0f66cdd15454",
+            "actions": [
+                {
+                    "name": "Movement",
+                    "type": "Value",
+                    "id": "b17c471e-510d-48f7-97d6-1c98f6d8e5a2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "ce2f7e36-4b36-43df-80ff-9c28221ef484",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "64f9c529-d7d7-4234-b78e-664e78c88127",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2cf9afc4-eb24-4a23-a283-2c74f5b43df2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0825c56-fba1-42c7-84b8-21109127333f",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "99f363f7-f1f8-4ce9-b47e-bbd5a8ac7406",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "3524d9af-4b04-44bf-a6af-582df9658714",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "ddc05b9c-9823-42b6-ba4c-52a901b9bf83",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "30cffed5-ead3-494a-88c5-c015a8e2a44c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "0e1e2c29-d411-4d94-a616-356a961f29de",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
