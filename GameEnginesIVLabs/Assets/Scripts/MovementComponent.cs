@@ -16,11 +16,13 @@ public class MovementComponent : MonoBehaviour
 
     private PlayerController _playerController;
     private Animator _animator;
+    
 
     public readonly int movementXHash = Animator.StringToHash("MovementX");
     public readonly int movementYHash = Animator.StringToHash("MovementY");
     public readonly int jumpHash = Animator.StringToHash("Jump");
     public readonly int RunHash = Animator.StringToHash("Run");
+    public readonly int AimingHash = Animator.StringToHash("Aiming");
     void Awake()
     {
         _playerController = GetComponent<PlayerController>();
@@ -40,7 +42,7 @@ public class MovementComponent : MonoBehaviour
     public void OnMovement(InputValue value)
     {
         inputDirection = value.Get<Vector2>();
-        _animator.SetFloat(movementXHash, inputDirection.x);
+        _animator.SetFloat(movementXHash,  inputDirection.x);
         _animator.SetFloat(movementYHash, inputDirection.y);
     }
 
@@ -53,6 +55,12 @@ public class MovementComponent : MonoBehaviour
     public void OnRun(InputValue value)
     {
         _playerController.isRunning = value.isPressed;
+    }
+
+    public void OnAim(InputValue value)
+    {
+        _playerController.isAiming = value.isPressed;
+        _animator.SetBool(AimingHash, _playerController.isAiming);
     }
     
 }
