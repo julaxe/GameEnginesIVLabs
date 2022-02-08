@@ -2204,6 +2204,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad49a19d2c4adc94b838606a5d459f85, type: 3}
+--- !u!114 &198088789 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1347942898299357665, guid: ad49a19d2c4adc94b838606a5d459f85, type: 3}
+  m_PrefabInstance: {fileID: 198088788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1c9f41ec8fc2e4d80502e6586ade23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &224302096
 GameObject:
   m_ObjectHideFlags: 0
@@ -7753,6 +7764,7 @@ GameObject:
   - component: {fileID: 1758099433}
   - component: {fileID: 1758099432}
   - component: {fileID: 1758099434}
+  - component: {fileID: 1758099435}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -7822,6 +7834,7 @@ MonoBehaviour:
   isRunning: 0
   isAiming: 0
   isFiring: 0
+  isReloading: 0
 --- !u!114 &1758099433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7871,6 +7884,19 @@ MonoBehaviour:
   minAngle: 40
   aimSensitivity: 5
   followObject: {fileID: 58139604}
+--- !u!114 &1758099435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758099428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df114a3cd279ce42aa5a9f8f2a4c3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponController: {fileID: 198088789}
 --- !u!1 &1788527447
 GameObject:
   m_ObjectHideFlags: 0

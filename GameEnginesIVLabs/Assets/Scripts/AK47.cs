@@ -1,19 +1,13 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class AK47 : WeaponController
 {
     // Start is called before the first frame update
-    public bool isJumping;
-    public bool isRunning;
-    public bool isAiming;
-    public bool isFiring;
-    public bool isReloading;
-
-    private void Awake()
+    void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -21,5 +15,4 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-    
 }

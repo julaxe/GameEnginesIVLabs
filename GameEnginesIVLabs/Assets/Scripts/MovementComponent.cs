@@ -25,11 +25,11 @@ public class MovementComponent : MonoBehaviour
     private Animator _animator;
     
 
-    public readonly int movementXHash = Animator.StringToHash("MovementX");
-    public readonly int movementYHash = Animator.StringToHash("MovementY");
-    public readonly int jumpHash = Animator.StringToHash("Jump");
-    public readonly int RunHash = Animator.StringToHash("Run");
-    public readonly int AimingHash = Animator.StringToHash("Aiming");
+    private readonly int _movementXHash = Animator.StringToHash("MovementX");
+    private readonly int _movementYHash = Animator.StringToHash("MovementY");
+    private readonly int _jumpHash = Animator.StringToHash("Jump");
+    private readonly int _runHash = Animator.StringToHash("Run");
+    
     void Awake()
     {
         _playerController = GetComponent<PlayerController>();
@@ -40,8 +40,10 @@ public class MovementComponent : MonoBehaviour
     {
         #region CameraMovement With Mouse
 
-        followObject.transform.rotation *= Quaternion.AngleAxis(_lookDirection.x * aimSensitivity * Time.deltaTime, Vector3.up);
-        followObject.transform.rotation *= Quaternion.AngleAxis(_lookDirection.y * aimSensitivity * Time.deltaTime, Vector3.left);
+        var rotation = followObject.transform.rotation;
+        rotation *= Quaternion.AngleAxis(_lookDirection.x * aimSensitivity * Time.deltaTime, Vector3.up);
+        rotation *= Quaternion.AngleAxis(_lookDirection.y * aimSensitivity * Time.deltaTime, Vector3.left);
+        followObject.transform.rotation = rotation;
 
         var angles = followObject.transform.eulerAngles;
         angles.z = 0;
@@ -70,14 +72,14 @@ public class MovementComponent : MonoBehaviour
     public void OnMovement(InputValue value)
     {
         _inputDirection = value.Get<Vector2>();
-        _animator.SetFloat(movementXHash,  _inputDirection.x);
-        _animator.SetFloat(movementYHash, _inputDirection.y);
+        _animator.SetFloat(_movementXHash,  _inputDirection.x);
+        _animator.SetFloat(_movementYHash, _inputDirection.y);
     }
 
     public void OnJump(InputValue value)
     {
         _playerController.isJumping = value.isPressed;
-        _animator.SetBool(jumpHash, _playerController.isJumping);
+        _animator.SetBool(_jumpHash, _playerController.isJumping);
     }
 
     public void OnLook(InputValue value)
@@ -89,10 +91,4 @@ public class MovementComponent : MonoBehaviour
         _playerController.isRunning = value.isPressed;
     }
 
-    public void OnAim(InputValue value)
-    {
-        _playerController.isAiming = value.isPressed;
-        _animator.SetBool(AimingHash, _playerController.isAiming);
-    }
-    
 }
