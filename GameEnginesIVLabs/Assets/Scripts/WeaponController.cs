@@ -16,6 +16,7 @@ public enum FiringPattern
     Automatic,
     SemiAutomatic
 }
+[System.Serializable]
 public struct WeaponStats
 {
     public WeaponType weaponType;

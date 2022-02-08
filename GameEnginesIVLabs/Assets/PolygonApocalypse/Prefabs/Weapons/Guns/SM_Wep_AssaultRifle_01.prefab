@@ -357,6 +357,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   socketIKLeftHand: {fileID: 1519564148359225185}
+  weaponStats:
+    weaponType: 0
+    firingPattern: 0
+    name: Ak47
+    damage: 20
+    clipSize: 30
+    bulletsInClip: 30
+    fireStartDelay: 0.25
+    fireRate: 0.2
+    fireDistance: 500
+    repeating: 1
+    weaponHitLayer:
+      serializedVersion: 2
+      m_Bits: 4294967295
 --- !u!1 &2542074897855457908
 GameObject:
   m_ObjectHideFlags: 0
