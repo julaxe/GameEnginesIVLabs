@@ -1,0 +1,33 @@
+{
+    "name": "LeagueActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "af375e15-8096-45bc-93e1-f3b772e896d0",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "436afce2-41e9-4f5a-96b8-efc58b8c8977",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e7fee0bb-003d-442a-841e-3f9885200237",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
